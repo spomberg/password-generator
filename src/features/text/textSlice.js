@@ -6,8 +6,8 @@ export const textSlice = createSlice({
     value: 'P4$5W0rD!'
   },
   reducers: {
-    setText: (newPassword) => {
-      state.value = newPassword
+    setText: (state, action) => {
+      state.value = action.payload;
     }
   }
 });
