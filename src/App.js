@@ -2,7 +2,9 @@ import './App.scss';
 
 function App() {
   return (
-    <h1>Password Generator</h1>
+    <div className='app'>
+      <h1>Password Generator</h1>
+    </div>
   );
 }
 
