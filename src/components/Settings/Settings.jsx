@@ -1,11 +1,9 @@
 import './Settings.scss';
 import Slider from '@mui/material/Slider';
-import { useSelector, useDispatch } from 'react-redux';
-import { setLength } from '../../features/length/lengthSlice';
+import { useState } from 'react';
 
 export default function Settings() {
-  const length = useSelector((state) => state.length.value);
-  const dispatch = useDispatch();
+  const [length, setLength] = useState(0);
 
   return (
     <div className='settings'>
@@ -19,8 +17,10 @@ export default function Settings() {
           step={1}
           min={0}
           max={20}
-          onChange={(event, value) => dispatch(setLength(value))}
+          onChange={(event, value) => setLength(value)}
         />
+      </div>
+      <div className='checkboxes'>
       </div>
     </div>
   )
