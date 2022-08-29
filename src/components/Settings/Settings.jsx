@@ -1,9 +1,16 @@
 import './Settings.scss';
 import Slider from '@mui/material/Slider';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 import { useState } from 'react';
 
 export default function Settings() {
   const [length, setLength] = useState(0);
+  const [hasUpperCase, setHasUpperCase] = useState(false);
+  const [hasLowerCase, setHasLowerCase] = useState(false);
+  const [hasNumbers, setHasNumbers] = useState(false);
+  const [hasSymbols, setHasSymbols] = useState(false);
 
   return (
     <div className='settings'>
@@ -21,6 +28,12 @@ export default function Settings() {
         />
       </div>
       <div className='checkboxes'>
+        <FormGroup>
+          <FormControlLabel control={<Checkbox />} label='Include Uppercase Letters'/>
+          <FormControlLabel control={<Checkbox />} label='Include Lowercase Letters'/>
+          <FormControlLabel control={<Checkbox />} label='Include Numbers'/>
+          <FormControlLabel control={<Checkbox />} label='Include Symbols'/>
+        </FormGroup>
       </div>
     </div>
   )
