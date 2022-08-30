@@ -6,8 +6,8 @@ export const hasNumbersSlice = createSlice({
     value: false
   },
   reducers: {
-    setNumbers: (state) => {
-      state.value = !state;
+    setNumbers: (state, action) => {
+      state.value = action.payload;
     }
   }
 })

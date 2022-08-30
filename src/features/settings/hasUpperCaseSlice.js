@@ -6,8 +6,8 @@ export const hasUpperCaseSlice = createSlice({
     value: false
   },
   reducers: {
-    setUpperCase: (state) => {
-      state.value = !state;
+    setUpperCase: (state, action) => {
+      state.value = action.payload;
     }
   }
 })

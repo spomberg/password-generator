@@ -6,8 +6,8 @@ export const hasSymbolsSlice = createSlice({
     value: false
   },
   reducers: {
-    setSymbols: (state) => {
-      state.value = !state;
+    setSymbols: (state, action) => {
+      state.value = action.payload;
     }
   }
 })

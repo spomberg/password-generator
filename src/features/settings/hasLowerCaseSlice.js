@@ -6,8 +6,8 @@ export const hasLowerCaseSlice = createSlice({
     value: false
   },
   reducers: {
-    setLowerCase: (state) => {
-      state.value = !state;
+    setLowerCase: (state, action) => {
+      state.value = action.payload;
     }
   }
 })
