@@ -6,6 +6,7 @@ import hasUpperCaseReducer from './features/settings/hasUpperCaseSlice';
 import hasLowerCaseReducer from './features/settings/hasLowerCaseSlice';
 import hasNumbersReducer from './features/settings/hasNumbersSlice';
 import hasSymbolsReducer from './features/settings/hasSymbolsSlice';
+import strengthReducer from './features/strength/strengthSlice';
 
 export default configureStore({
   reducer: {
@@ -15,6 +16,7 @@ export default configureStore({
     hasUpperCase: hasUpperCaseReducer,
     hasLowerCase: hasLowerCaseReducer,
     hasNumbers: hasNumbersReducer,
-    hasSymbols: hasSymbolsReducer
+    hasSymbols: hasSymbolsReducer,
+    strength: strengthReducer
   },
 });
