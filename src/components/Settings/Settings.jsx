@@ -14,11 +14,23 @@ export default function Settings() {
   return (
     <div className='checkboxes'>
         <FormGroup>
-          <FormControlLabel control={<Checkbox onChange={(e) => dispatch(setUpperCase(e.target.checked))} />} label='Include Uppercase Letters'/>
-          <FormControlLabel control={<Checkbox onChange={(e) => dispatch(setLowerCase(e.target.checked))} />} label='Include Lowercase Letters'/>
-          <FormControlLabel control={<Checkbox onChange={(e) => dispatch(setNumbers(e.target.checked))} />} label='Include Numbers'/>
-          <FormControlLabel control={<Checkbox onChange={(e) => dispatch(setSymbols(e.target.checked))} />} label='Include Symbols'/>
-        </FormGroup>
+          <FormControlLabel 
+            control={<Checkbox onChange={(e) => dispatch(setUpperCase(e.target.checked))} />} 
+            label='Include Uppercase Letters'
+          />
+          <FormControlLabel 
+            control={<Checkbox onChange={(e) => dispatch(setLowerCase(e.target.checked))} />} 
+            label='Include Lowercase Letters'
+          />
+          <FormControlLabel 
+            control={<Checkbox onChange={(e) => dispatch(setNumbers(e.target.checked))} />} 
+            label='Include Numbers'
+          />
+          <FormControlLabel 
+            control={<Checkbox onChange={(e) => dispatch(setSymbols(e.target.checked))} />} 
+            label='Include Symbols'
+          />
+          </FormGroup>
       </div>
   )
 }
