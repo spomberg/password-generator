@@ -1,0 +1,68 @@
+@import '../../global.scss';
+
+.strength-meter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  background-color: $bg-color;
+
+  h3 {
+    color: $strength-color;
+  }
+  
+  .right-side {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    height: 100%;
+    
+    .strength {
+      color: $font-color;
+      width: 40%;
+      font-family: JetBrainsMono;
+
+      &.empty {
+        color: $bg-color;
+      }
+    }
+
+    .strength-bars {
+      display: flex;
+      flex-direction: row;
+      width: 60%;
+      
+      .bar {
+        height: 100%;
+        width: 5%;
+        outline-style: solid;
+        outline-color: $font-color;
+        outline-width: 0.15rem;
+        margin-right: 5%;
+        align-self: center;
+        transition: all 0.5s ease;
+
+        &.too-weak {
+          background-color: $too-weak;
+          outline-color: $too-weak;
+        }
+
+        &.weak {
+          background-color: $weak;
+          outline-color: $weak;
+        }
+
+        &.medium {
+          background-color: $medium;
+          outline-color: $medium;
+        }
+
+        &.strong {
+          background-color: $strong;
+          outline-color: $strong;
+        }
+      }
+    }
+  }
+}
