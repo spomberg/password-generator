@@ -3,6 +3,7 @@ import TextField from './components/TextField/TextField';
 import Slider from './components/Slider/Slider';
 import Settings from './components/Settings/Settings';
 import StrengthMeter from './components/StrengthMeter/StrengthMeter';
+import GenerateButton from './components/GenerateButton/GenerateButton';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Slider />
       <Settings />
       <StrengthMeter />
+      <GenerateButton />
     </div>
   );
 }
