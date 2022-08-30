@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { updateStrength } from '../../helpers/helpers';
 import { setStrength } from '../../features/strength/strengthSlice';
 import { useEffect } from 'react';
-
+import Typography from '@mui/material/Typography';
 
 export default function StrengthMeter() {
   const strength = useSelector((state) => state.strength.value);
@@ -23,7 +23,19 @@ export default function StrengthMeter() {
 
     <div className='strength-meter'>
       <h3>STRENGTH</h3>
-      <h2>{strength}</h2>
+      <div className='right-side'>
+        <Typography 
+          className={`strength ${strength === 'N/A' && 'empty'}`} 
+          variant="h5">
+            {strength}
+        </Typography>
+        <div className='strength-bars'>
+          <div className={`bar ${strength === 'STRONG' && 'strong'} ${strength === 'MEDIUM' && 'medium'} ${strength === 'WEAK' && 'weak'} ${strength === 'TOO WEAK!' && 'too-weak'}`} />
+          <div className={`bar ${strength === 'STRONG' && 'strong'} ${strength === 'MEDIUM' && 'medium'} ${strength === 'WEAK' && 'weak'}`} />
+          <div className={`bar ${strength === 'STRONG' && 'strong'} ${strength === 'MEDIUM' && 'medium'}`} />
+          <div className={`bar ${strength === 'STRONG' && 'strong'} `} />
+        </div>
+      </div>
     </div>
   )
 }
