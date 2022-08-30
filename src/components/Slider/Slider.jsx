@@ -16,7 +16,7 @@ export default function Settings() {
         </div>
         <Slider 
           aria-label="Character length"
-          defaultValue={length}
+          defaultValue={0}
           valueLabelDisplay="off"
           step={1}
           min={0}
