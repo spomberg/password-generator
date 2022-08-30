@@ -2,6 +2,7 @@ import './App.scss';
 import TextField from './components/TextField/TextField';
 import Slider from './components/Slider/Slider';
 import Settings from './components/Settings/Settings';
+import StrengthMeter from './components/StrengthMeter/StrengthMeter';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <TextField />
       <Slider />
       <Settings />
+      <StrengthMeter />
     </div>
   );
 }
