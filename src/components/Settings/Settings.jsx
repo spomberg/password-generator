@@ -1,40 +1,24 @@
 import './Settings.scss';
-import Slider from '@mui/material/Slider';
+import { useDispatch } from 'react-redux';
+import { setUpperCase } from '../../features/settings/hasUpperCaseSlice';
+import { setLowerCase } from '../../features/settings/hasLowerCaseSlice';
+import { setNumbers } from '../../features/settings/hasNumbersSlice';
+import { setSymbols } from '../../features/settings/hasSymbolsSlice';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import { useState } from 'react';
 
 export default function Settings() {
-  const [length, setLength] = useState(0);
-  const [hasUpperCase, setHasUpperCase] = useState(false);
-  const [hasLowerCase, setHasLowerCase] = useState(false);
-  const [hasNumbers, setHasNumbers] = useState(false);
-  const [hasSymbols, setHasSymbols] = useState(false);
+  const dispatch = useDispatch();
 
   return (
-    <div className='settings'>
-      <div className='slider'>
-        <h5>Character Length</h5>
-        <h4>{length}</h4>
-        <Slider 
-          aria-label="Character length"
-          defaultValue={length}
-          valueLabelDisplay="off"
-          step={1}
-          min={0}
-          max={20}
-          onChange={(event, value) => setLength(value)}
-        />
-      </div>
-      <div className='checkboxes'>
+    <div className='checkboxes'>
         <FormGroup>
-          <FormControlLabel control={<Checkbox />} label='Include Uppercase Letters'/>
-          <FormControlLabel control={<Checkbox />} label='Include Lowercase Letters'/>
-          <FormControlLabel control={<Checkbox />} label='Include Numbers'/>
-          <FormControlLabel control={<Checkbox />} label='Include Symbols'/>
+          <FormControlLabel control={<Checkbox onChange={(e) => dispatch(setUpperCase(e.target.checked))} />} label='Include Uppercase Letters'/>
+          <FormControlLabel control={<Checkbox onChange={(e) => dispatch(setLowerCase(e.target.checked))} />} label='Include Lowercase Letters'/>
+          <FormControlLabel control={<Checkbox onChange={(e) => dispatch(setNumbers(e.target.checked))} />} label='Include Numbers'/>
+          <FormControlLabel control={<Checkbox onChange={(e) => dispatch(setSymbols(e.target.checked))} />} label='Include Symbols'/>
         </FormGroup>
       </div>
-    </div>
   )
 }
