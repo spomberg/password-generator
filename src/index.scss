@@ -1,6 +1,12 @@
+@import './global.scss';
+
 @font-face {
   font-family: "JetBrainsMono";
   src: local("JetBrainsMono"),
    url("./fonts/JetBrainsMono/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: bold;
   }
+
+body {
+  background-color: $bg-color;
+}
