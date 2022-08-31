@@ -1,0 +1,30 @@
+@import '../../global.scss';
+
+.slider {
+  width: 95%;
+
+  .length {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-top: 10%;
+    justify-content: space-between;
+
+    h4 {
+      color: $font-color;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 18px;
+      align-self: center;
+    }
+
+    h5 {
+      color: $strong;
+      font-size: 32px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    display: flex;
+  }
+}
