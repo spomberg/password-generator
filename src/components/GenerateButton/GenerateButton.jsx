@@ -1,7 +1,8 @@
 import './GenerateButton.scss';
 import { generatePassword } from '../../helpers/helpers';
 import { useSelector, useDispatch } from 'react-redux';
-import { setText } from '../../features/text/textSlice'
+import { setText } from '../../features/text/textSlice';
+import { setCopied } from '../../features/copied/copiedSlice';
 import RightArrow from '../../assets/images/icon-arrow-right.svg';
 
 export default function GenerateButton() {
@@ -15,7 +16,10 @@ export default function GenerateButton() {
   return (
     <button 
       className='generate'
-      onClick={() => dispatch(setText(generatePassword(length, hasUpperCase, hasLowerCase, hasNumbers, hasSymbols)))}  
+      onClick={() => {
+        dispatch(setText(generatePassword(length, hasUpperCase, hasLowerCase, hasNumbers, hasSymbols)));
+        dispatch(setCopied(false));
+      }}  
     >
       <h3>GENERATE</h3>
       <img src={RightArrow} alt="Right Arrow" />
