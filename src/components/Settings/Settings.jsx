@@ -12,22 +12,34 @@ export default function Settings() {
   const dispatch = useDispatch();
 
   return (
-    <div className='checkboxes'>
+    <div className='settings'>
         <FormGroup>
           <FormControlLabel 
-            control={<Checkbox onChange={(e) => dispatch(setUpperCase(e.target.checked))} />} 
+            control={<Checkbox 
+              disableRipple={true} 
+              onChange={(e) => dispatch(setUpperCase(e.target.checked))} 
+              />} 
             label='Include Uppercase Letters'
           />
           <FormControlLabel 
-            control={<Checkbox onChange={(e) => dispatch(setLowerCase(e.target.checked))} />} 
+            control={<Checkbox 
+              disableRipple={true} 
+              onChange={(e) => dispatch(setLowerCase(e.target.checked))} 
+              />} 
             label='Include Lowercase Letters'
           />
           <FormControlLabel 
-            control={<Checkbox onChange={(e) => dispatch(setNumbers(e.target.checked))} />} 
+            control={<Checkbox 
+              disableRipple={true} 
+              onChange={(e) => dispatch(setNumbers(e.target.checked))} 
+              />} 
             label='Include Numbers'
           />
           <FormControlLabel 
-            control={<Checkbox onChange={(e) => dispatch(setSymbols(e.target.checked))} />} 
+            control={<Checkbox 
+              disableRipple={true}  
+              onChange={(e) => dispatch(setSymbols(e.target.checked))} 
+              />} 
             label='Include Symbols'
           />
           </FormGroup>
