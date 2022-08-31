@@ -8,22 +8,20 @@ export default function Settings() {
   const dispatch = useDispatch();
 
   return (
-    <div className='settings'>
-      <div className='slider'>
-        <div className='length'>
-          <h5>Character Length</h5>
-          <h4>{length}</h4>
-        </div>
-        <Slider 
-          aria-label="Character length"
-          defaultValue={0}
-          valueLabelDisplay="off"
-          step={1}
-          min={0}
-          max={20}
-          onChange={(event, value) => dispatch(setLength(value))}
-        />
+    <div className='slider'>
+      <div className='length'>
+        <h4>Character Length</h4>
+        <h5>{length}</h5>
       </div>
-    </div>
+      <Slider 
+        aria-label="Character length"
+        defaultValue={0}
+        valueLabelDisplay="off"
+        step={1}
+        min={0}
+        max={20}
+        onChange={(event, value) => dispatch(setLength(value))}
+      />
+      </div>
   )
 }
