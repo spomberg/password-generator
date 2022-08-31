@@ -12,13 +12,15 @@ export default function TextField() {
   return (
     <div className='text-field'>
        <span {...text === 'P4$5W0rD!' && {className: 'defaultText'} }>{text}</span>  
-        {copied && (<span>COPIED</span>)}
-        <CopyToClipboard 
-          onCopy={() => dispatch(setCopied(true))}
-          text={text}
-        >
-          <img src={CopyIcon} alt="Copy password" />  
-        </CopyToClipboard>
+        <div className='copy-section'>
+          {copied && (<span className='copied'>COPIED</span>)}
+          <CopyToClipboard 
+            onCopy={() => dispatch(setCopied(true))}
+            text={text}
+          >
+            <img src={CopyIcon} alt="Copy password" />  
+          </CopyToClipboard>
+        </div>
     </div>
   )
 }
