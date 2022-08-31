@@ -10,10 +10,12 @@ function App() {
     <div className='app'>
       <h1>Password Generator</h1>
       <TextField />
-      <Slider />
-      <Settings />
-      <StrengthMeter />
-      <GenerateButton />
+      <div className='form'>
+        <Slider />
+        <Settings />
+        <StrengthMeter />
+        <GenerateButton />
+      </div>
     </div>
   );
 }
