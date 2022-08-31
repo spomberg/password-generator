@@ -1,8 +1,14 @@
 @import './index.scss'; 
+@import './global.scss'; 
 
 .app {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: JetBrainsMono;
+ 
+  h1 {
+    font-size: 18px;
+    color: $title-color;
+  }
 }
