@@ -14,9 +14,10 @@ export default function Settings() {
         <h5>{length}</h5>
       </div>
       <Slider 
-        aria-label="Character length"
+        className='slider'
+        aria-label='Character length'
         defaultValue={0}
-        valueLabelDisplay="off"
+        valueLabelDisplay='off'
         step={1}
         min={0}
         max={20}
