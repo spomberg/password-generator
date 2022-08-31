@@ -1,0 +1,23 @@
+@import '../../global.scss';
+
+.settings {
+  margin-bottom: 5%;
+  width: 95%;
+
+  span {
+    font-family: JetBrainsMono;
+    color: $font-color;
+  }
+
+  .MuiButtonBase-root {
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $strong;
+    }
+  }
+
+  .MuiCheckbox-root.Mui-checked {
+    color: $strong;
+  }
+}
