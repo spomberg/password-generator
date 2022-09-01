@@ -3,6 +3,7 @@ import { generatePassword } from '../../helpers/helpers';
 import { useSelector, useDispatch } from 'react-redux';
 import { setText } from '../../features/text/textSlice';
 import { setCopied } from '../../features/copied/copiedSlice';
+import { ReactSVG } from 'react-svg';
 import RightArrow from '../../assets/images/icon-arrow-right.svg';
 
 export default function GenerateButton() {
@@ -22,7 +23,7 @@ export default function GenerateButton() {
       }}  
     >
       <h3>GENERATE</h3>
-      <img src={RightArrow} alt="Right Arrow" />
+      <ReactSVG src={RightArrow}/>
     </button>
   )
 }
