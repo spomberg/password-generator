@@ -28,12 +28,16 @@
       align-self: center;
       font-size: 12px;
       color: $title-color;
-      margin-right: 15%;
+      margin-right: 10%;
     }
 
-    img {
-      width: 15%;
+    svg {
       cursor: pointer;
+      fill: $strong;
+      
+      &:hover {
+        fill: $font-color;
+      }
     }
   }
 }
