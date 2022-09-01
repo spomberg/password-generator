@@ -73,4 +73,20 @@
       }
     }
   }
+
+  @media screen and (max-width: 1250px) {
+    h3 {
+      margin-right: 15%;
+    }
+
+    .right-side {
+      .strength-bars {
+        margin-right: 15%;
+
+        .bar {
+          margin-right: 15%;
+        }
+      }
+    }
+  }
 }
