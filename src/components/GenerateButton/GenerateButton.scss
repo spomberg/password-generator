@@ -1,0 +1,25 @@
+@import '../../global.scss';
+
+.generate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  font-family: JetBrainsMono;
+  background-color: $strong;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    outline-style: solid;
+    outline-color: $strong;
+    outline-width: 0.5rem;
+    background-color: $component-bg;
+    outline-width: 0.1rem;
+    color: $strong;
+  }
+  
+  h3 {
+    margin-right: 8%;
+  }
+}
