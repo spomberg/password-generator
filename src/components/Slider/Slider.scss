@@ -41,10 +41,21 @@
       outline-style: solid;
       outline-width: 0.07rem;
       box-shadow: none;
-
+      
       &:hover {
         color: $bg-color;
         outline-color: $strong;
+      }
+
+      // For Safari
+      @media not all and (min-resolution:.001dpcm){ 
+        @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+          outline-style: none;
+
+          &:hover {
+            color: $font-color;
+          }
+        }
       }
     }
   }
