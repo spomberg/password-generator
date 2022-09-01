@@ -1,6 +1,7 @@
 import './TextField.scss';
 import CopyIcon from '../../assets/images/icon-copy.svg';
 import CopyToClipboard from 'react-copy-to-clipboard';
+import { ReactSVG } from 'react-svg';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCopied } from '../../features/copied/copiedSlice';
 
@@ -18,7 +19,7 @@ export default function TextField() {
             onCopy={() => dispatch(setCopied(true))}
             text={text}
           >
-            <img src={CopyIcon} alt="Copy password" />  
+            <ReactSVG src={CopyIcon}/>  
           </CopyToClipboard>
         </div>
     </div>
