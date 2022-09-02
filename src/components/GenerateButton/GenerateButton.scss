@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   width: 95%;
+  padding: 5%;
   font-family: JetBrainsMono;
   background-color: $strong;
   transition: all 0.3s ease;
@@ -19,7 +20,7 @@
     color: $strong;
   }
   
-  h3 {
+  span {
     margin-right: 8%;
   }
 }
