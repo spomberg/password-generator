@@ -22,7 +22,7 @@ export default function GenerateButton() {
         dispatch(setCopied(false));
       }}  
     >
-      <h3>GENERATE</h3>
+      <span>GENERATE</span>
       <ReactSVG src={RightArrow}/>
     </button>
   )
