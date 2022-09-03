@@ -1,3 +1,13 @@
+/**
+ * 
+ * @param {integer} length 
+ * @param {boolean} hasUpperCase 
+ * @param {boolean} hasLowerCase 
+ * @param {boolean} hasNumbers 
+ * @param {boolean} hasSymbols 
+ * @returns string
+ */
+
 function updateStrength(length, hasUpperCase, hasLowerCase, hasNumbers, hasSymbols) {
   const strength = -10 + length + Number(hasUpperCase) + Number(hasLowerCase) + Number(hasNumbers) + Number(hasSymbols);
 
@@ -7,10 +17,17 @@ function updateStrength(length, hasUpperCase, hasLowerCase, hasNumbers, hasSymbo
   if (strength === 2) return 'WEAK';
   if (strength === 3) return 'MEDIUM';
   if (strength >= 4) return 'STRONG';
-  
-  return strength;
 }
 
+/**
+ * 
+ * @param {integer} length 
+ * @param {boolean} hasUpperCase 
+ * @param {boolean} hasLowerCase 
+ * @param {boolean} hasNumbers 
+ * @param {boolean} hasSymbols 
+ * @returns string
+ */
 function generatePassword(length, hasUpperCase, hasLowerCase, hasNumbers, hasSymbols) {
   if (length < 5 || (!hasUpperCase && !hasLowerCase && !hasNumbers && !hasSymbols)) return 'P4$5W0rD!';
   
