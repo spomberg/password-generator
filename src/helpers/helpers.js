@@ -73,10 +73,10 @@ function isPasswordValid(password, hasUpperCase, hasLowerCase, hasNumbers, hasSy
   const numbers = '0123456789'.split("");
   const symbols = '@%+/!#$?:,(){}[]'.split("");
 
-  if (hasUpperCase && !compareArr(pwArr, upperCase)) return false;
-  if (hasLowerCase && !compareArr(pwArr, lowerCase)) return false;
-  if (hasNumbers && !compareArr(pwArr, numbers)) return false;
-  if (hasSymbols && !compareArr(pwArr, symbols)) return false;
+  if (hasUpperCase && compareArr(pwArr, upperCase) === false) return false;
+  if (hasLowerCase && compareArr(pwArr, lowerCase) === false) return false;
+  if (hasNumbers && compareArr(pwArr, numbers) === false) return false;
+  if (hasSymbols && compareArr(pwArr, symbols) === false) return false;
 
   return true;
 }
