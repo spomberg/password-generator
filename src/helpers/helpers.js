@@ -55,4 +55,17 @@ function generatePassword(length, hasUpperCase, hasLowerCase, hasNumbers, hasSym
   return result;
 }
 
-module.exports = { updateStrength, generatePassword };
+/**
+ * Verifies if the password contains at least one character for each of the settings that are on
+ * @param {string} password 
+ * @param {boolean} hasUpperCase 
+ * @param {boolean} hasLowerCase 
+ * @param {boolean} hasNumbers 
+ * @param {boolean} hasSymbols 
+ * @returns string
+ */
+function isPasswordValid(password, hasUpperCase, hasLowerCase, hasNumbers, hasSymbols) {
+  return false;
+}
+
+module.exports = { updateStrength, generatePassword, isPasswordValid };
