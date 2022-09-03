@@ -10,7 +10,7 @@ describe('isPasswordValid helper function', () => {
     const input = isPasswordValid(pw, hasUpperCase, hasLowerCase, hasNumbers, hasSymbols);
 
     expect(input).toBe(true);
-   })
+  })
 
   test('should return false when the str does not contain at least a char for each setting', () => { 
     const pw = '6rNofhEO';
@@ -21,5 +21,16 @@ describe('isPasswordValid helper function', () => {
     const input = isPasswordValid(pw, hasUpperCase, hasLowerCase, hasNumbers, hasSymbols);
 
     expect(input).toBe(false);
-   })
+  })
+
+  test('should return true when the str does not contain at least a char for a setting that is off', () => { 
+    const pw = '6rNofhEO';
+    const hasUpperCase = true;
+    const hasLowerCase = true;
+    const hasNumbers = true;
+    const hasSymbols = false;
+    const input = isPasswordValid(pw, hasUpperCase, hasLowerCase, hasNumbers, hasSymbols);
+
+    expect(input).toBe(true);
+  })
  });
