@@ -65,6 +65,35 @@ function generatePassword(length, hasUpperCase, hasLowerCase, hasNumbers, hasSym
  * @returns string
  */
 function isPasswordValid(password, hasUpperCase, hasLowerCase, hasNumbers, hasSymbols) {
+  const pwArr = password.split(""); // Turns password into array
+  
+  // Turns characters strings into arrays
+  const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split("");
+  const lowerCase = 'abcdefghijklmnopqrstuvwxyz'.split("");
+  const numbers = '0123456789'.split("");
+  const symbols = '@%+/!#$?:,(){}[]'.split("");
+
+  if (hasUpperCase && !compareArr(pwArr, upperCase)) return false;
+  if (hasLowerCase && !compareArr(pwArr, lowerCase)) return false;
+  if (hasNumbers && !compareArr(pwArr, numbers)) return false;
+  if (hasSymbols && !compareArr(pwArr, symbols)) return false;
+
+  return true;
+}
+
+/**
+ * Loops through each array element and returns true if one of the characters from array 2 
+ * is present in array 1
+ * @param {array} arr1 
+ * @param {array} arr2 
+ * @returns 
+ */
+function compareArr(arr1, arr2) {
+  for (let x = 0; x < arr1.length; x++) {
+    for (let y = 0; y < arr2.length; y++) {
+      if (arr1[x] === arr2[y]) return;
+    }
+  };
   return false;
 }
 
