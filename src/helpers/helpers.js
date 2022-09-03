@@ -52,7 +52,11 @@ function generatePassword(length, hasUpperCase, hasLowerCase, hasNumbers, hasSym
     result = result.concat(baseStr[Math.floor(Math.random() * baseStr.length)])
   }
 
-  return result;
+  // Verifies if the password is valid using helper function, if not, use recursion to create a new one
+  if (!isPasswordValid(result, hasUpperCase, hasLowerCase, hasNumbers, hasSymbols)) {
+    return generatePassword(length, hasUpperCase, hasLowerCase, hasNumbers, hasSymbols);
+  }
+  else return result;
 }
 
 /**
