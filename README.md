@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Password Generator App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Password generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/password-generator-app-Mr8CLycqjh). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Available Scripts
+This project was built with React.js, JavaScript, Sass and tested with Jest, and it's hosted [here](https://password-generator.spomberg.com).
 
-In the project directory, you can run:
+## Table of contents
 
-### `npm start`
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Dependencies](#dependencies)
+- [What I learned](#what-i-learned)
+  - [Work with wireframes](#work-with-wireframes)
+  - [React Redux](#react-redux)
+  - [Recursion](#recursion)
+-[Author](#author)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Password Generator App is a responsive single-page site built with React. Users are able to:
 
-### `npm test`
+- Generate a password based on the selected inclusion options
+- Copy the generated password to the computer's clipboard
+- See a strength rating for their generated password
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### The challenge
 
-### `npm run build`
+The challenge was to create the app based solely on the user stories above and the design files provided. I was free to use any framework and language I wished and no code was given to start with.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The image below is the provided preview of what the app was supposed to look like:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![preview](https://github.com/spomberg/password-generator-app/blob/main/docs/preview.jpg?raw=true)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Screenshot
 
-### `npm run eject`
+And these are gifs showing the final product in action:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Desktop
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![desktop-demo](https://github.com/spomberg/password-generator-app/blob/main/docs/password-generator.gif?raw=true)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Mobile
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![mobile-demo](https://github.com/spomberg/password-generator-app/blob/main/docs/password-generator-mobile.gif?raw=true)
 
-## Learn More
+## My process
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Built with
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React
+- Sass
+- JavaScript
+- MaterialUI
 
-### Code Splitting
+### Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- React-Redux
+- MaterialUI
+- React Copy to Clipboard
+- React SVG
+- Jest
 
-### Analyzing the Bundle Size
+## What I learned
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Work with wireframes
 
-### Making a Progressive Web App
+This challenge allowed me flex my frontend skills, first and foremost I learned how to bring industry-level designs to life, I'm most proud of how close the final product is to the wireframes provided.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### React Redux
 
-### Advanced Configuration
+Although I had solid experience with React beforehand, one thing that I had relied on in the past on frontend projects was prop drilling, which makes the code confusing and hard to maintain. Right at the beginning I decided I was going to learn how to use React Redux to control states and make my code cleaner. I'm proud to say I understand the concept now and am will be using it on React projects moving forward.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Recursion
+A concept that I had always struggled to grasp is recursion and I was really happy to find a practical use for it inside the main helper function and I feel that I finally understand it now. 
 
-### Deployment
+The generatePassword function creates a random password string based on the settings provided by the user, however, the string must contain at least one character from each category selected.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+I used another helper function to verify if the password is valid and if it's not I call generatePassword to generate another random string to be verified again and so on until the result is valid.
 
-### `npm run build` fails to minify
+```js
+function generatePassword(length, hasUpperCase, hasLowerCase, hasNumbers, hasSymbols) {
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  //(...)
+
+  if (!isPasswordValid(result, hasUpperCase, hasLowerCase, hasNumbers, hasSymbols)) {
+
+    return generatePassword(length, hasUpperCase, hasLowerCase, hasNumbers, hasSymbols);
+  
+  }
+
+  else return result;
+
+}
+```
+
+## Author
+
+- Portfolio - [spomberg.com](https://spomberg.com)
+- LinkedIn - [/marcos-spomberg](https://www.linkedin.com/in/marcos-spomberg/)
