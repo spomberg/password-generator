@@ -9,11 +9,9 @@ This project was built with React.js, JavaScript, Sass and tested with Jest, and
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [Dependencies](#dependencies)
+- [Built with](#built-with)
 - [What I learned](#what-i-learned)
-  - [Work with wireframes](#work-with-wireframes)
+  - [Work with detailed wireframes](#work-with-detailed-wireframes)
   - [React Redux](#react-redux)
   - [Recursion](#recursion)
 -[Author](#author)
@@ -48,9 +46,7 @@ Mobile
 
 ![mobile-demo](https://github.com/spomberg/password-generator-app/blob/main/docs/password-generator-mobile.gif?raw=true)
 
-## My process
-
-### Built with
+## Built with
 
 - React
 - Sass
@@ -67,9 +63,13 @@ Mobile
 
 ## What I learned
 
-### Work with wireframes
+### Work with detailed wireframes
 
-This challenge allowed me flex my frontend skills, first and foremost I learned how to bring industry-level designs to life, I'm most proud of how close the final product is to the wireframes provided.
+This challenge allowed me flex my frontend skills, I was able to bring industry-level designs to life, I'm most proud of how close the final product is to the wireframes provided.
+
+### Test-Driven Development practice
+
+The helper functions are the heart of this app, they generate the randomized password string and verify that it's valid. I used Jest and followed a test-driven workflow to ensure the results matched the expected outcome.
 
 ### React Redux
 
