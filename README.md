@@ -15,7 +15,7 @@ This project was built with React.js, JavaScript, Sass and tested with Jest, and
   - [Test Driven development practice](#test-driven-development-practice)
   - [React Redux](#react-redux)
   - [Recursion](#recursion)
--[Author](#author)
+- [Author](#author)
 
 ## Overview
 
