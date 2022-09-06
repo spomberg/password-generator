@@ -66,7 +66,7 @@ Mobile
 
 ### Work with detailed wireframes
 
-This challenge allowed me flex my frontend skills, I was able to bring industry-level designs to life, I'm most proud of how close the final product is to the wireframes provided.
+This challenge allowed me to flex my frontend skills, I was able to bring industry-level designs to life, I'm most proud of how close the final product is to the wireframes provided.
 
 ### Test-Driven Development practice
 
