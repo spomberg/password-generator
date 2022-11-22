@@ -109,6 +109,10 @@ Aside from my passion for coding, my abilities also extend to communication and 
   
 My goal is to now use my skills to make meaningful connections, exchange knowledge and help others while working as a Web Developer.
 
-
 - Portfolio - [spomberg.com](https://spomberg.com)
 - LinkedIn - [/marcos-spomberg](https://www.linkedin.com/in/marcos-spomberg/)
+
+## Other projects
+
+- My Movie List - [Site](https://mymovielist.ca) / [Repo](https://github.com/spomberg/my-movie-list)
+- Memory Game - [Site](https://memory.spomberg.com) / [Repo](https://github.com/spomberg/memory)
