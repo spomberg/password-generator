@@ -2,7 +2,7 @@
 
 This is a solution to the [Password generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/password-generator-app-Mr8CLycqjh). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-This project was built with React.js, JavaScript, Sass and tested with Jest, and it's hosted [here](https://password-generator.spomberg.com).
+This project was built with React.js, Redux, JavaScript, Sass and tested with Jest, and it's hosted [here](https://password-generator.spomberg.com).
 
 ## Table of contents
 
