@@ -101,7 +101,7 @@ function generatePassword(length, hasUpperCase, hasLowerCase, hasNumbers, hasSym
 
 ## Author
 
-Web Developer with a knack for finding innovative solutions for solving complex problems in a timely manner. 
+AWS Certified Web Developer with a knack for finding innovative solutions for solving complex problems in a timely manner. 
 
 Throughout my career, I have honed my people skills in other industries where I successfully led projects in different areas. I also trained hundreds of people, as passing down knowledge (while continuously learning) is a passion of mine. 
   
